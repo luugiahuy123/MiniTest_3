@@ -15,6 +15,9 @@ public class Main {
             System.out.println("5. Sắp xếp Vật liệu");
             System.out.println("6. Nhận chi phí giảm giá");
             System.out.println("7. Nhận chênh lệch chiết khấu");
+            System.out.println("8. Hiển thị danh sách sản pham");
+            System.out.println("9. Ghi dữ liệu vào tệp");
+            System.out.println("10. Đọc dữ liệu từ tệp");
             System.out.println("0. Exit");
             System.out.println("Enter your choice:");
             choice = scanner.nextInt();
@@ -115,6 +118,17 @@ public class Main {
                     String date3 = scanner.nextLine();
                     LocalDate today2 = LocalDate.parse(date3);
                     System.out.println("Chi phí giảm giá: " + manager.getDiscountDifference(today2));
+                    break;
+                case 8:
+                    manager.displayMaterial();
+                    break;
+                case 9:
+                    manager.writeDataToFile();
+                    System.out.println("Đã lưu sản phẩm vào tệp!");
+                    break;
+                case 10:
+                    manager.readDataFromFile();
+                    System.out.println("Đã đọc sản phẩm từ tệp!");
                     break;
                 case 0:
                     System.out.println("Thoát");
